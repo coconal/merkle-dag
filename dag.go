@@ -63,7 +63,7 @@ func StoreFile(store KVStore, node Node, h hash.Hash) []byte {
 		links := make([]Link, 0, len(hashes))
 		for i, hash := range hashes {
 			links = append(links, Link{
-				Name: "",
+				Name: file.Name(),
 				Hash: hash,
 				Size: len(blocks[i]),
 			})
